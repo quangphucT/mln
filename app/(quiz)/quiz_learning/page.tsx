@@ -84,7 +84,7 @@ const QuizPage = () => {
     }
   };
   
-  const useHint = (id: number) => {
+  const showHint = (id: number) => {
     const question = questions.find(q => q.id === id);
     if (question) {
       setMessage(`Gợi ý: ${question.hint}`);
@@ -170,7 +170,7 @@ const QuizPage = () => {
                           <Button onClick={() => checkAnswer(question.id)} variant="default" className="w-full">
                             Kiểm tra
                           </Button>
-                          <Button onClick={() => useHint(question.id)} variant="outline" className="w-full">
+                          <Button onClick={() => showHint(question.id)} variant="outline" className="w-full">
                             Xem gợi ý
                           </Button>
                         </div>
