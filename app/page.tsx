@@ -34,10 +34,10 @@ export default function Home() {
         {/* Content */}
         <div className="container mx-auto py-24 px-4 relative z-10">
           <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight drop-shadow-2xl">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight drop-shadow-2xl animate-fade-in-up">
               Cơ cấu xã hội – giai cấp
             </h1>
-            <p className="text-xl md:text-2xl text-white max-w-2xl mx-auto font-light drop-shadow-lg">
+            <p className="text-xl md:text-2xl text-white max-w-2xl mx-auto font-light drop-shadow-lg animate-fade-in-up animation-delay-300">
               Trong thời kỳ quá độ lên chủ nghĩa xã hội tại Việt Nam
             </p>
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
             <div className="inline-flex rounded-lg p-1 bg-slate-100 dark:bg-slate-800/50">
               <button 
                 onClick={() => setActiveTab("concept")}
-                className={`px-6 py-2.5 rounded-md text-sm font-medium transition-all ${
+                className={`px-6 py-2.5 rounded-md text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
                   activeTab === "concept" 
                     ? "bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 shadow-sm" 
                     : "text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-white"
@@ -68,7 +68,7 @@ export default function Home() {
               </button>
               <button 
                 onClick={() => setActiveTab("evolution")}
-                className={`px-6 py-2.5 rounded-md text-sm font-medium transition-all ${
+                className={`px-6 py-2.5 rounded-md text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
                   activeTab === "evolution" 
                     ? "bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 shadow-sm" 
                     : "text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-white"
@@ -78,7 +78,7 @@ export default function Home() {
               </button>
               <button 
                 onClick={() => setActiveTab("vietnam")}
-                className={`px-6 py-2.5 rounded-md text-sm font-medium transition-all ${
+                className={`px-6 py-2.5 rounded-md text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
                   activeTab === "vietnam" 
                     ? "bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 shadow-sm" 
                     : "text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-white"
@@ -91,8 +91,8 @@ export default function Home() {
           
           {/* Content areas with elegant design */}
           {activeTab === "concept" && (
-            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden transform transition-all">
-              <div className="h-2 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-500 animate-slide-in-up hover:shadow-3xl hover:-translate-y-1">
+              <div className="h-2 bg-gradient-to-r from-indigo-500 to-purple-500 animate-gradient-x"></div>
               <div className="px-8 py-10">
                 <h2 className="text-3xl font-bold mb-8 text-slate-800 dark:text-slate-200">Khái niệm cơ bản</h2>
                 <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -119,7 +119,7 @@ export default function Home() {
                 </div>
                 <Button 
                   variant="ghost" 
-                  className="text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20"
+                  className="text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-all duration-300 hover:scale-105 animate-float"
                   onClick={() => {
                     setModalContent({
                       title: "Khái niệm cơ cấu xã hội - giai cấp",
@@ -136,8 +136,8 @@ export default function Home() {
           )}
 
           {activeTab === "evolution" && (
-            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden transform transition-all">
-              <div className="h-2 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-500 animate-slide-in-up hover:shadow-3xl hover:-translate-y-1">
+              <div className="h-2 bg-gradient-to-r from-blue-500 to-cyan-400 animate-gradient-x"></div>
               <div className="px-8 py-10">
                 <h2 className="text-3xl font-bold mb-8 text-slate-800 dark:text-slate-200">Biến đổi quy luật</h2>
                 <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
@@ -153,9 +153,9 @@ export default function Home() {
                   <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">Tiến trình phát triển</h3>
                 </div>
                 
-                <div className="mb-8">
+                <div className="mb-8 animate-fade-in-up animation-delay-300">
                   <div className="h-2 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full" style={{ width: "76%" }}></div>
+                    <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full animate-gradient-x transition-all duration-1000 ease-out" style={{ width: "76%" }}></div>
                   </div>
                   <div className="flex justify-between text-sm mt-2">
                     <div className="text-slate-500 dark:text-slate-400">Quá độ ban đầu</div>
@@ -164,11 +164,11 @@ export default function Home() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <div className="p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
+                  <div className="p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl hover-lift animate-fade-in-up animation-delay-450">
                     <h4 className="font-medium text-blue-700 dark:text-blue-300 mb-2">Giai đoạn chuyển đổi</h4>
                     <p className="text-blue-800 dark:text-blue-200">Chuyển từ cơ cấu xã hội nhiều thành phần sang cơ cấu xã hội chủ nghĩa</p>
                   </div>
-                  <div className="p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
+                  <div className="p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl hover-lift animate-fade-in-up animation-delay-600">
                     <h4 className="font-medium text-blue-700 dark:text-blue-300 mb-2">Mục tiêu hướng đến</h4>
                     <p className="text-blue-800 dark:text-blue-200">Xóa bỏ chế độ người bóc lột người, thực hiện công bằng xã hội</p>
                   </div>
@@ -180,7 +180,7 @@ export default function Home() {
                 </div>
                 <Button 
                   variant="ghost" 
-                  className="text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                  className="text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 hover:scale-105 animate-float"
                   onClick={() => {
                     setModalContent({
                       title: "Biến đổi quy luật của cơ cấu xã hội - giai cấp",
@@ -197,14 +197,14 @@ export default function Home() {
           )}
 
           {activeTab === "vietnam" && (
-            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden transform transition-all">
-              <div className="h-2 bg-gradient-to-r from-rose-500 to-pink-500"></div>
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-500 animate-slide-in-up hover:shadow-3xl hover:-translate-y-1">
+              <div className="h-2 bg-gradient-to-r from-rose-500 to-pink-500 animate-gradient-x"></div>
               <div className="px-8 py-10">
                 <h2 className="text-3xl font-bold mb-8 text-slate-800 dark:text-slate-200">Đặc điểm ở Việt Nam</h2>
                 
                 <div className="flex flex-col space-y-6">
-                  <div className="flex bg-rose-50 dark:bg-rose-900/20 rounded-xl overflow-hidden">
-                    <div className="w-3 bg-rose-500"></div>
+                  <div className="flex bg-rose-50 dark:bg-rose-900/20 rounded-xl overflow-hidden hover-lift animate-fade-in-up animation-delay-150">
+                    <div className="w-3 bg-rose-500 animate-pulse-custom"></div>
                     <div className="p-6">
                       <h3 className="text-xl font-medium text-rose-700 dark:text-rose-300 mb-3">Thành phần cơ cấu xã hội</h3>
                       <p className="text-slate-700 dark:text-slate-300">
@@ -214,8 +214,8 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <div className="flex bg-rose-50 dark:bg-rose-900/20 rounded-xl overflow-hidden">
-                    <div className="w-3 bg-rose-500"></div>
+                  <div className="flex bg-rose-50 dark:bg-rose-900/20 rounded-xl overflow-hidden hover-lift animate-fade-in-up animation-delay-300">
+                    <div className="w-3 bg-rose-500 animate-pulse-custom"></div>
                     <div className="p-6">
                       <h3 className="text-xl font-medium text-rose-700 dark:text-rose-300 mb-3">Vai trò của các lực lượng</h3>
                       <p className="text-slate-700 dark:text-slate-300">
@@ -236,7 +236,7 @@ export default function Home() {
                 </div>
                 <Button 
                   variant="outline" 
-                  className="border-rose-200 text-rose-600 dark:border-rose-800 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-900/20"
+                  className="border-rose-200 text-rose-600 dark:border-rose-800 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-900/20 transition-all duration-300 hover:scale-105 animate-float"
                   onClick={() => {
                     setModalContent({
                       title: "Đặc điểm cơ cấu xã hội - giai cấp ở Việt Nam",
@@ -255,14 +255,14 @@ export default function Home() {
 
         {/* Các lực lượng xã hội section */}
         <div className="max-w-6xl mx-auto mb-16">
-          <div className="text-center mb-12">
-            <Badge className="mb-3 bg-violet-100 text-violet-700 dark:bg-violet-900 dark:text-violet-300 px-3 py-1">
+          <div className="text-center mb-12 animate-fade-in-up">
+            <Badge className="mb-3 bg-violet-100 text-violet-700 dark:bg-violet-900 dark:text-violet-300 px-3 py-1 animate-bounce-custom">
               Phân tích chi tiết
             </Badge>
-            <h2 className="text-3xl font-bold mb-3 text-slate-800 dark:text-slate-200">
+            <h2 className="text-3xl font-bold mb-3 text-slate-800 dark:text-slate-200 animate-fade-in-up animation-delay-150">
               Các lực lượng xã hội
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto animate-fade-in-up animation-delay-300">
               Chi tiết về từng thành phần trong cơ cấu xã hội - giai cấp của Việt Nam 
               trong thời kỳ quá độ lên chủ nghĩa xã hội
             </p>
@@ -270,7 +270,7 @@ export default function Home() {
           
           <Tabs defaultValue="cong-nhan" className="w-full">
             <div className="flex justify-center">
-              <TabsList className="h-auto p-1 bg-slate-100 dark:bg-slate-800/50 rounded-lg mb-8">
+              <TabsList className="h-auto p-1 bg-slate-100 dark:bg-slate-800/50 rounded-lg mb-8 animate-slide-in-up animation-delay-450 hover-lift">
                 <TabsTrigger value="cong-nhan" className="rounded-md data-[state=active]:bg-white dark:data-[state=active]:bg-slate-700 data-[state=active]:shadow-sm px-5 py-2.5">
                   Công nhân
                 </TabsTrigger>
@@ -293,7 +293,7 @@ export default function Home() {
             </div>
             
             <TabsContent value="cong-nhan">
-              <Card className="border-0 shadow-lg overflow-hidden bg-white dark:bg-slate-900">
+              <Card className="border-0 shadow-lg overflow-hidden bg-white dark:bg-slate-900 animate-slide-in-up hover:shadow-3xl transition-all duration-300">
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-1/3 bg-gradient-to-br from-blue-600 to-indigo-700 p-8 text-white">
                     <h3 className="text-2xl font-bold mb-4">Giai cấp công nhân</h3>
@@ -588,9 +588,7 @@ export default function Home() {
         {/* Liên minh giai cấp section */}
         <div className="max-w-6xl mx-auto mb-16">
           <div className="text-center mb-12">
-            <Badge className="mb-3 bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 px-3 py-1">
-              Section II
-            </Badge>
+          
             <h2 className="text-3xl font-bold mb-3 text-slate-800 dark:text-slate-200">
               Khái niệm liên minh giai cấp, tầng lớp
             </h2>
@@ -732,9 +730,7 @@ export default function Home() {
         {/* Section III: Tầm quan trọng */}
         <div className="max-w-6xl mx-auto mb-16">
           <div className="text-center mb-12">
-            <Badge className="mb-3 bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300 px-3 py-1">
-              Section III
-            </Badge>
+         
             <h2 className="text-3xl font-bold mb-3 text-slate-800 dark:text-slate-200">
               Tầm quan trọng
             </h2>
@@ -841,9 +837,7 @@ export default function Home() {
         {/* Section IV: Tại Việt Nam hiện nay */}
         <div className="max-w-6xl mx-auto mb-16">
           <div className="text-center mb-12">
-            <Badge className="mb-3 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 px-3 py-1">
-              Section IV
-            </Badge>
+            
             <h2 className="text-3xl font-bold mb-3 text-slate-800 dark:text-slate-200">
               Tại Việt Nam hiện nay
             </h2>
@@ -1082,19 +1076,104 @@ export default function Home() {
       
       {/* Modal for additional information */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className={`max-w-2xl ${
-          modalContent.type === "concept" ? "border-l-4 border-l-indigo-500" :
-          modalContent.type === "evolution" ? "border-l-4 border-l-blue-500" :
-          modalContent.type === "vietnam" ? "border-l-4 border-l-rose-500" :
-          modalContent.type === "alliance" ? "border-l-4 border-l-emerald-500" : ""
-        }`}>
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold">{modalContent.title}</DialogTitle>
-          </DialogHeader>
-          <div className="mt-6 text-slate-700 dark:text-slate-300 space-y-4">
-            {modalContent.content.split("\n").map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+        <DialogContent className="max-w-4xl max-h-[85vh] p-0 overflow-hidden bg-white dark:bg-slate-900 animate-modal-slide-in flex flex-col">
+          {/* Header with gradient background */}
+          <div className={`relative p-6 text-white flex-shrink-0 ${
+            modalContent.type === "concept" ? "bg-gradient-to-br from-indigo-600 to-purple-700" :
+            modalContent.type === "evolution" ? "bg-gradient-to-br from-blue-600 to-cyan-700" :
+            modalContent.type === "vietnam" ? "bg-gradient-to-br from-rose-600 to-pink-700" :
+            modalContent.type === "alliance" ? "bg-gradient-to-br from-emerald-600 to-teal-700" : 
+            "bg-gradient-to-br from-slate-600 to-slate-700"
+          }`}>
+            {/* Background pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              }}></div>
+            </div>
+            
+            <div className="relative flex items-center space-x-4">
+              {/* Icon based on content type */}
+              <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm flex-shrink-0">
+                {modalContent.type === "concept" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                )}
+                {modalContent.type === "evolution" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                )}
+                {modalContent.type === "vietnam" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+                {modalContent.type === "alliance" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                )}
+                {!modalContent.type && (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+              </div>
+              
+              <div className="flex-1 min-w-0">
+                <DialogHeader className="space-y-1">
+                  <DialogTitle className="text-2xl font-bold text-white leading-tight">
+                    {modalContent.title}
+                  </DialogTitle>
+                  <div className="flex items-center space-x-2">
+                    <Badge variant="secondary" className="bg-white/20 text-white border-white/30 hover:bg-white/30 text-xs">
+                      {modalContent.type === "concept" && "Khái niệm cơ bản"}
+                      {modalContent.type === "evolution" && "Biến đổi quy luật"}
+                      {modalContent.type === "vietnam" && "Đặc điểm Việt Nam"}
+                      {modalContent.type === "alliance" && "Liên minh giai cấp"}
+                    </Badge>
+                  </div>
+                </DialogHeader>
+              </div>
+            </div>
+          </div>
+          
+          {/* Content area - scrollable */}
+          <div className="flex-1 overflow-y-auto p-8">
+            <div className="prose prose-slate dark:prose-invert max-w-none">
+              {modalContent.content.split("\n\n").map((paragraph, index) => (
+                <div key={index} className="mb-4 last:mb-0">
+                  {paragraph.trim() && (
+                    <p className="text-base leading-relaxed text-slate-700 dark:text-slate-300">
+                      {paragraph}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Footer with close button - fixed at bottom */}
+          <div className="flex-shrink-0 p-6 border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50">
+            <div className="flex justify-end">
+              <Button 
+                onClick={() => setIsModalOpen(false)}
+                className={`${
+                  modalContent.type === "concept" ? "bg-indigo-600 hover:bg-indigo-700" :
+                  modalContent.type === "evolution" ? "bg-blue-600 hover:bg-blue-700" :
+                  modalContent.type === "vietnam" ? "bg-rose-600 hover:bg-rose-700" :
+                  modalContent.type === "alliance" ? "bg-emerald-600 hover:bg-emerald-700" : 
+                  "bg-slate-600 hover:bg-slate-700"
+                } text-white transition-all duration-300 hover:scale-105`}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Đã hiểu
+              </Button>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
